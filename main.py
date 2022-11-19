@@ -1,3 +1,4 @@
+import os
 import webbrowser
 import qrcode
 import qrcode.image.svg
@@ -8,4 +9,4 @@ def qr_generator(url):
         img.save(qr)
 
 qr_generator(input("Type the url you want turned into a QR code:\n"))
-webbrowser.open("file://C:/Users/benja/Desktop/MakeQRCode/qr.svg")
+webbrowser.open("file://" + os.path.realpath("qr.svg"))
